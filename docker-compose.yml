@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./conf:/etc/nginx/conf.d
+    depends_on:
+      - app
+
+  app:
+    image: test_app:v7
+    command: "gunicorn run:app --bind 0.0.0.0"
+
+
+
