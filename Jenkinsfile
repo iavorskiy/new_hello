@@ -26,4 +26,17 @@ node {
             app.push("latest")
         }
     }
+
+     stage('Deploy image'){
+
+         sh "docker pull iavorskiy/new_app:latest"
+
+         sh "docker-compose up -d"
+
+         sh "docker-compose scale app=3"
+
+    }
+
+
+
 }
