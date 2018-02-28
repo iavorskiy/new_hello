@@ -30,10 +30,16 @@ node {
      stage('Deploy image'){
 
          sh "docker pull iavorskiy/app_new"
-
          sh "docker-compose up -d"
-
          sh "docker-compose scale app=3"
+
+    }
+
+    stage('Deploy image'){
+
+         sh "docker ps > test.txt"
+         sh "python nginx_upstream.py"
+         sh "docker-compose restart web"
 
     }
 
