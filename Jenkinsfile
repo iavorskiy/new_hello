@@ -31,11 +31,11 @@ node {
 
          sh "docker pull iavorskiy/app_new"
          sh "docker-compose up -d"
-         sh "docker-compose scale app=3"
+         sh "docker-compose scale app=6"
 
     }
 
-    stage('Deploy image'){
+    stage('Deploy nginx conf'){
 
          sh "docker ps > test.txt"
          sh "python nginx_upstream.py"
