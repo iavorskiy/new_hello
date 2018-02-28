@@ -29,7 +29,7 @@ node {
 
      stage('Deploy image'){
 
-         sh "docker pull iavorskiy/new_app:latest"
+         sh "docker pull iavorskiy/app_new"
 
          sh "docker-compose up -d"
 
