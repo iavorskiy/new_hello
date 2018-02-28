@@ -26,7 +26,9 @@ def gen_conf(docker_ids):
         conf.append(server_line.format(id))
     conf.append('}')
     conf.append(server_str)
+    print(conf)
     return '\n'.join(conf)
+
 
 def write_conf(config,path):
     with open(path, 'w') as new_conf:
