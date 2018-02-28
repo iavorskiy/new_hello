@@ -12,7 +12,7 @@ services:
       - app
 
   app:
-    image: iavorskiy/new_app:latest
+    image: iavorskiy/app_new:latest
     command: "gunicorn run:app --bind 0.0.0.0"
 
 
