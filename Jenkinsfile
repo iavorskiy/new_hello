@@ -31,7 +31,7 @@ node {
 
          sh "docker pull iavorskiy/app_new"
          sh "docker-compose up -d"
-         sh "docker-compose scale app=6"
+         sh "docker-compose scale app=3"
 
     }
 
