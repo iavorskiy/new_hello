@@ -27,7 +27,7 @@ node {
 
          sh "docker pull iavorskiy/app_new"
          sh "/usr/local/bin/docker-compose up -d"
-        #sh "/usr/local/bin/docker-compose scale app=3"
+        
 
     }
 
