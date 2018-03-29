@@ -35,7 +35,7 @@ node {
 
          sh "docker ps > test.txt"
          sh "python nginx_upstream.py"
-         sh "docker-compose restart web"
+         sh "/usr/local/bin/docker-compose restart web"
 
     }
 
